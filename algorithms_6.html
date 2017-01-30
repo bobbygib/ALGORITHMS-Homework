@@ -16,48 +16,55 @@
 
 // If you are feeling adventurous, try adding even more rooms, items, and challenges to this game!
 
-var position = [0];
-while(position = [0]) {
-	var userAns = prompt("You find yourself in a circular room. You walk around and see a giant compass in the middle of the floor. To the North, there is a door whose color is black as soot, and to the West, there is a door as white as snow. Which direction do you go?")
-  if (userAns === "go north" || userAns === "Go North" || userAns === "go North" || userAns === "Go North" || userAns === "north" || userAns === "North"){
-	prompt("You died because no shield");
-	var position = [0];
-	  } else if (userAns === "go west" || userAns === "Go West" || userAns === "go West" || userAns === "Go west" || userAns === "west" || userAns === "West" || userAns === "WEST") {
+var position = 0;
+while(position === 0) {
+	var userAns = prompt("You find yourself in a circular room. You walk around and see a giant compass in the middle of the floor. To the North, there is a door whose color is black as soot, and to the West, there is a door as white as snow. Which direction do you go?").toLowerCase();
+  if (userAns === "go north" || userAns === "north"){
+	alert("You walk to the North door, it opens for you. It is pitch black and you ");
+	var position = 0;
+	  } else if (userAns === "go west" || userAns === "west") {
 	 		alert("You walk to the west door.");
-			var position = [2];
+			var position = 2;
 		} 
-		// else {
-		// 	position = []
-		// }
+		else {
+			alert("Invalid Answer");
+			position = 0;
+		}
 
 		
-	while (position = [2]) {
-		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you take the shield? or leave the room?")
- 		if (getShield === "get shield"){
-			alert("you take the shield and return to the first room");
-			var position = [3];
+	while (position === 2) {
+		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you take the shield? or leave the room?").toLowerCase();
+ 		if (getShield === "get shield" || getShield === "take the shield"){
+			alert("You see the shinny wonderful shield and decide to lift it from its mount. Its very lite and shinny. This might be helpful for later!");
+			var position = 3;
 			var hasShield = true;
-		} else if (getShield === "leave room") {
-			alert("you return to the room sans shield")
-			var position = [0];
+		} else if (getShield === "leave room" || getShield ===  "leave the room") {
+			alert("You are stupid and think the shield is stupid so you go back to the starting room without the stupid shield.")
+			var position = 0;
+		} else {
+				alert("Invalid Answer");
+				position = 2;
 		}
 	
 
-		while(position = [3] ) {
-			var nextMove = prompt("in the start room. which door do you choose")
-		  if (nextMove === "go north" || nextMove === "Go North" || nextMove === "go North" || nextMove === "Go North" || nextMove === "north" || nextMove === "North"){
+		while(position === 3 ) {
+			var nextMove = prompt("You enter your starting room yet again. There are still only two doors").toLowerCase();
+		  if (nextMove === "go north" || nextMove === "north"){
 				alert("you walkt to the north door");
-				var position = [4];
-			} else if (nextMove === "go west" || nextMove === "Go West" || nextMove === "go West" || nextMove === "Go west" || nextMove === "west" || nextMove === "West" || nextMove === "WEST") {
+				var position = 4;
+			} else if (nextMove === "go west" || nextMove === "west") {
 			 		alert("You walk to the west door.");
-					var position = [2];
-					} 
-			while(position = [4]) {
-				var dFight = prompt("You walk to the North door, it opens for you. The shiled lights up the room and reveals a large dragon. The dragon unleases a fury of fire towards you. The shiled pretects you from the flames. The dragon is furious, they build up a large blast to break the shield, but the shiled reflects the blast upwards to the ceiling. The blast knocks free a giant stalactite, and it comes falling down onto the dragons head, killing it imidiately. From here you can go back to start room through the door to the South or you can go through the North door and see what comes next.")
-				if (endOrback === "north" || endOrback === "north door" || endOrback === "North door") {
+					var position = 2;
+					} else {
+						alert("Invalid answer");
+						position = 3;
+					}
+			while(position === 4) {
+				var dFight = prompt("You walk to the North door, it opens for you. The shiled lights up the room and reveals a large dragon. The dragon unleases a fury of fire towards you. The shiled pretects you from the flames. The dragon is furious, they build up a large blast to break the shield, but the shiled reflects the blast upwards to the ceiling. The blast knocks free a giant stalactite, and it comes falling down onto the dragons head, killing it imidiately. From here you can go back to start room through the door to the South or you can go through the North door and see what comes next.").toLowerCase();
+				if (endOrback === "north" || endOrback === "north door") {
 					alert("Congradulations, you have beat the game!")
-				} else if (endOrback === "go back" || endOrback === "south door" || endOrback === "South door" || endOrback === "South Door") {
-					var position = [3];
+				} else if (endOrback === "go back" || endOrback === "south door") {
+					var position = 3;
 				}
 
 				//question: else statement at end of else ifs does not work as a invalid answer catch

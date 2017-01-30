@@ -12,24 +12,31 @@
 	var total = [];
 	fib[0] = 0;
 	fib[1] = 1;
-		for (i = 2; fib[i-1] + fib[i-2] < 2000000 ; i++) {
+		for (var i = 2; fib[i-1] + fib[i-2] < 2000000 ; i++) {
 			fib[i] = fib[i-2] + fib[i-1];
 			//sum = fib[i-2] + fib[i-1];
 			//while (i >= 2000000){  
-				//break;	
-			sum = fib[i];
-			fibArray[i]=sum;
-			sum++;	
+				fibArray.push(fib[i])
 			
-		
-			//console.log(fibArray)
-
 		}
+		//console.log(fibArray);
+		for(var i = 0; i < fibArray.length; i++){
+			if (fib[i] % 2 !== 0){
+				sum += fibArray[i];
+			}
+			//sum += fibArray[i];
+		}
+		//console.log(fibArray)
+
+	
+		console.log(sum);
+
+
 		
-			for(var j = 0; j < fibArray.length; j++){
-				sum = sum + fibArray[j];
-    }
-    	console.log(sum);
+			// for(var j = 1; j < fibArray.length; j++){
+			// 	sum2 = sum2 + fibArray[j];
+   //  }
+   //  	console.log(sum2);
 		
 		//for (var j = 1; j <= 30; j++) {
 		//}
