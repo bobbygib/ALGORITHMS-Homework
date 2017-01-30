@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//Have the user come up with a number between 1 and 100 (inclusive), but not enter it into the computer. Have the computer guess numbers in that same range, and ask the user if that is the number (e.g. “Is 40 your number?”). You can use prompt text (propmt("is 40 your number")) to accomplish this. If the number is too high, have the user enter “H”. If the number is too low, have the user enter “L”. If the computer guessed the number, have the user enter “Y”, and start a new game. Can you write an efficient algorithm so that the computer will find your number in the minimum number of guesses?
+
+		var min = 1;
+		var max = 100;
+		var guess = 50;
+		var userNum = prompt("Think of a number between 1 and 100. If this is you enter in the letter 'y', If your number is higher, pres 'h', and if your number is lower, enter in 'l' Is your number " + guess + "?" );
+		while (userNum !== "y" || "Y") {
+			if (userNum === "h" || "H") {
+				prompt("Is your number " + (.5 * (max + guess)));
+			} if (userNum === "l" || "L"); {
+				prompt("Is your number " + (.5 *(min + guess))); }
+
+
+
+
+				userNum = prompt("Think of a number between 1 and 100. Is your number " + userNum + "?" );
+			
+				
+			}
+		
+			
+
+		//for (var i = 0; i < 1; i++) {
+	//		var guess = prompt
+		
+
+		//if (input === y){
+		//	userNum;
+		
+	</script>
+</body>
+</html>
