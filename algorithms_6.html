@@ -20,9 +20,9 @@ var position = 0;
 while(position === 0) {
 	var userAns = prompt("You find yourself in a circular room. You walk around and see a giant compass in the middle of the floor. To the North, there is a door whose color is black as soot, and to the West, there is a door as white as snow. Which direction do you go?").toLowerCase();
   if (userAns === "go north" || userAns === "north"){
-	alert("You walk to the North door, it opens for you. It is pitch black and you ");
+	alert("You walk to the North door, it opens for you. You walk through the northern door, its dark but you keep walking forward. After a good time of walking and not thinking if you should turn back, there comes a loud large bellow from a direction you cant tell. A giant ball of fire and light comes hurling towards you. The only the only thing racing through your head is, maybe I should have checked the other door. You die.");
 	var position = 0;
-	  } else if (userAns === "go west" || userAns === "west") {
+	  } else if (userAns === "go westk" || userAns === "west") {
 	 		alert("You walk to the west door.");
 			var position = 2;
 		} 
@@ -32,9 +32,9 @@ while(position === 0) {
 		}
 
 		
-	while (position === 2) {
+	while (position === 2)d {
 		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you take the shield? or leave the room?").toLowerCase();
- 		if (getShield === "get shield" || getShield === "take the shield"){
+ 		if (getShield === "get shield" || getShield === "take the shield" getShield === "take shield"){
 			alert("You see the shinny wonderful shield and decide to lift it from its mount. Its very lite and shinny. This might be helpful for later!");
 			var position = 3;
 			var hasShield = true;
@@ -63,7 +63,7 @@ while(position === 0) {
 				var dFight = prompt("You walk to the North door, it opens for you. The shiled lights up the room and reveals a large dragon. The dragon unleases a fury of fire towards you. The shiled pretects you from the flames. The dragon is furious, they build up a large blast to break the shield, but the shiled reflects the blast upwards to the ceiling. The blast knocks free a giant stalactite, and it comes falling down onto the dragons head, killing it imidiately. From here you can go back to start room through the door to the South or you can go through the North door and see what comes next.").toLowerCase();
 				if (endOrback === "north" || endOrback === "north door") {
 					alert("Congradulations, you have beat the game!")
-				} else if (endOrback === "go back" || endOrback === "south door") {
+				} else if (endOrback === "go back" || endOrback === "south door" || endOrback === "south") {
 					var position = 3;
 				}
 
