@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>ALGO 6</title>
 </head>
 <body>
 	<script>
@@ -32,9 +32,9 @@ while(position === 0) {
 		}
 
 		
-	while (position === 2)d {
+	while (position === 2) { 
 		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you take the shield? or leave the room?").toLowerCase();
- 		if (getShield === "get shield" || getShield === "take the shield" getShield === "take shield"){
+ 		if (getShield === "get shield" || getShield === "take the shield" || getShield === "take shield"){
 			alert("You see the shinny wonderful shield and decide to lift it from its mount. Its very lite and shinny. This might be helpful for later!");
 			var position = 3;
 			var hasShield = true;
@@ -48,9 +48,9 @@ while(position === 0) {
 	
 
 		while(position === 3 ) {
-			var nextMove = prompt("You enter your starting room yet again. There are still only two doors").toLowerCase();
+			var nextMove = prompt("You enter your starting room yet again. There are still only two doors. Do you go back to the West door or now go to the North door.").toLowerCase();
 		  if (nextMove === "go north" || nextMove === "north"){
-				alert("you walkt to the north door");
+				alert("You walkt to the north door.");
 				var position = 4;
 			} else if (nextMove === "go west" || nextMove === "west") {
 			 		alert("You walk to the west door.");
@@ -60,12 +60,14 @@ while(position === 0) {
 						position = 3;
 					}
 			while(position === 4) {
-				var dFight = prompt("You walk to the North door, it opens for you. The shiled lights up the room and reveals a large dragon. The dragon unleases a fury of fire towards you. The shiled pretects you from the flames. The dragon is furious, they build up a large blast to break the shield, but the shiled reflects the blast upwards to the ceiling. The blast knocks free a giant stalactite, and it comes falling down onto the dragons head, killing it imidiately. From here you can go back to start room through the door to the South or you can go through the North door and see what comes next.").toLowerCase();
+				var endOrback = prompt("You walk to the North door, it opens for you. The shiled lights up the room and reveals a large dragon. The dragon unleases a fury of fire towards you. The shiled pretects you from the flames. The dragon is furious, they build up a large blast to break the shield, but the shiled reflects the blast upwards to the ceiling. The blast knocks free a giant stalactite, and it comes falling down onto the dragons head, killing it imidiately. You notice only one new door to the north. Do you go to the north door? or ").toLowerCase();
 				if (endOrback === "north" || endOrback === "north door") {
 					alert("Congradulations, you have beat the game!")
+					var position = 0;
 				} else if (endOrback === "go back" || endOrback === "south door" || endOrback === "south") {
-					var position = 3;
+					var position = 5;
 				}
+				while(position === 5 );
 
 				//question: else statement at end of else ifs does not work as a invalid answer catch
 				//in wihle statements can you have a || or &&
