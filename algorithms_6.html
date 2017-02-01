@@ -33,12 +33,12 @@ while(position === 0) {
 
 		
 	while (position === 2) { 
-		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you take the shield? or leave the room?").toLowerCase();
- 		if (getShield === "get shield" || getShield === "take the shield" || getShield === "take shield"){
+		var getShield = prompt("The west door opens for you. As you walk in you see a glare coming from the middle if of the room. There is a large shield sitting atop a rock. It lights up the whole room and you can see it its the only item in the room. You also so there is only one door, the door you came from. Do you 'take the shield'? or 'leave the room'?").toLowerCase();
+ 		if (getShield === "get shield" || getShield === "take the shield" || getShield === "take shield" || getShield === "sheild"){
 			alert("You see the shinny wonderful shield and decide to lift it from its mount. Its very lite and shinny. This might be helpful for later!");
 			var position = 3;
 			var hasShield = true;
-		} else if (getShield === "leave room" || getShield ===  "leave the room") {
+		} else if (getShield === "leave room" || getShield ===  "leave the room" || getShield === "leave") {
 			alert("You are stupid and think the shield is stupid so you go back to the starting room without the stupid shield.")
 			var position = 0;
 		} else {
