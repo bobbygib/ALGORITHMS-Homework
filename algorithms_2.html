@@ -6,27 +6,19 @@
 </head>
 <body>
 	<script>
-		// for (var i = 1; i <= 30; i = i + 1) {
-		// 	var line = "";
-		// 	for (var j = 1; j <= 30; j = j + 1) {
-		// 		line = line + (i * j) + " ";
-		// 	}
-		// 	console.log(line);
-		// }
-	
 		var arrNat = []
-			for (var i = 1; i < 1500; i++) { //init, condition, and 
-				if(i % 5 === 0 || i % 3 === 0){
- 					arrNat.push(i);	
-				}
+		for (var i = 1; i < 1500; i++) { 
+			if(i % 5 === 0 || i % 3 === 0){
+				arrNat.push(i);	
 			}
-			console.log(arrNat);
+		}
+		console.log(arrNat);
 			
-			var sum = 0;
-			for (var i = 0; i < arrNat.length; i++) {
-    		sum = sum + arrNat[i];
-			}
-			console.log(sum);
+		var sum = 0;
+		for (var i = 0; i < arrNat.length; i++) {
+			sum = sum + arrNat[i];
+		}
+		console.log(sum);
 	</script>
 </body>
 </html>
